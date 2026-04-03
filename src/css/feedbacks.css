@@ -1,144 +1,259 @@
-/* СЕКЦІЯ */
-.section {
-    padding-top: 32px;
-    padding-bottom: 32px;
+.feedbacks {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: #fbfbfb;
 }
 
-/* КОНТЕЙНЕР */
-.container {
-    padding-right: 16px;
-    padding-left: 16px;
+.feedbacks-container {
+    max-width: 375px;
+    margin: 0 auto;
 }
 
-/* ЗАГОЛОВОК */
-.feedbacks-name-block {
+.feedbacks-heading {
+    margin-bottom: 40px;
+}
+
+.feedbacks-title {
+    margin: 0 0 16px;
+    color: #0d0f10;
+    font-size: 42px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
-    text-align: center;
-    margin-bottom: 32px;
-    font-family: "Comfortaa", sans-serif;
+    line-height: 1;
+    letter-spacing: -0.04em;
 }
 
-/* СПИСОК КАРТОК */
-.feedbacks-client-list {
+.feedbacks-subtitle {
+    max-width: 286px;
+    margin: 0;
+    color: #353535;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.feedbacks-slider {
+    overflow: hidden;
+}
+
+.feedbacks-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    gap: 24px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
 }
 
 .feedbacks-item {
-    width: 100%;
+    display: none;
+    flex: 0 0 100%;
 }
 
-/* КАРТКА ВСЕРЕДИНІ */
+.feedbacks-item:first-child {
+    display: block;
+}
+
 .feedbacks-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    min-height: 292px;
 }
 
-/* ЗІРКИ */
-.feedbacks-star-list {
+.feedbacks-stars {
     display: flex;
     gap: 4px;
-    margin-bottom: 12px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
 }
 
-.star-icon {
-    fill: #3AC04C;
+.feedbacks-star-icon {
+    display: block;
+    fill: #0d0f10;
 }
 
-.star-icon-without-color {
-    stroke: #3AC04C;
-    fill: #EBF8ED;
-    stroke-width: 2px;
+.feedbacks-star-icon-empty {
+    fill: transparent;
+    stroke: #0d0f10;
+    stroke-width: 1.6px;
 }
 
-/* ТЕКСТ ВІДГУКУ */
 .feedbacks-text {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-    margin: 0 0 12px 0;
-    flex-grow: 1;
-    font-family: "Comfortaa", sans-serif;
+    margin: 0 0 24px;
+    color: #1c1c1c;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.55;
 }
 
-/* АВТОР */
 .feedbacks-author {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.6;
     margin: 0;
+    color: #111111;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.feedbacks-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feedbacks-pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.feedbacks-pagination-button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #d4d4d4;
+    cursor: pointer;
+    transition: background-color 250ms ease, transform 250ms ease;
+}
+
+.feedbacks-pagination-button.is-active {
+    background-color: #0d0f10;
+}
+
+.feedbacks-pagination-button:hover,
+.feedbacks-pagination-button:focus {
+    background-color: #8c8c8c;
+    transform: scale(1.1);
+}
+
+.feedbacks-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.feedbacks-nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    color: #111111;
+    cursor: pointer;
+    transition: background-color 250ms ease, border-color 250ms ease,
+        color 250ms ease, transform 250ms ease;
+}
+
+.feedbacks-nav-button:hover,
+.feedbacks-nav-button:focus {
+    border-color: #111111;
+    background-color: #111111;
+    color: #fbfbfb;
+    transform: translateY(-1px);
+}
+
+.feedbacks-nav-icon {
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
-    /* СЕКЦІЯ */
-    .section {
+    .feedbacks {
         padding-top: 64px;
         padding-bottom: 64px;
     }
 
-    /* КОНТЕЙНЕР */
-    .container {
-        padding-right: 32px;
-        padding-left: 32px;
+    .feedbacks-container {
+        max-width: 768px;
     }
 
-    /* СПИСОК КАРТОК */
-    .feedbacks-client-list {
-        display: flex; 
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 32px 24px;
+    .feedbacks-heading {
+        margin-bottom: 56px;
     }
 
-    /* ОДИН КЛІЄНТ (li) */
+    .feedbacks-title {
+        max-width: 520px;
+        margin-bottom: 24px;
+        font-size: 56px;
+    }
+
+    .feedbacks-subtitle {
+        max-width: 520px;
+        font-size: 20px;
+    }
+
+    .feedbacks-list {
+        margin-bottom: 40px;
+    }
+
     .feedbacks-item {
-        width: calc((100% - 24px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
     }
 
-    /* ЗІРКИ */
-    .feedbacks-star-list { 
-        margin-bottom: 24px;
+    .feedbacks-item:nth-child(-n + 2) {
+        display: block;
     }
 
-    /* КАРТКА ВСЕРЕДИНІ */
     .feedbacks-card {
-        width: 100%;
+        min-height: 360px;
     }
 
-    /* ТЕКСТ ВІДГУКУ */
-    .feedbacks-text {
-        margin-bottom: 24px;
+    .feedbacks-controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    /* КОНТЕЙНЕР */
-    .container {
-        padding-right: 64px;
-        padding-left: 64px;
+    .feedbacks {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
-     /* ЗАГОЛОВОК */
-    .feedbacks-name-block {
-        font-size: 48px;
+    .feedbacks-container {
+        max-width: 1440px;
+    }
+
+    .feedbacks-heading {
         margin-bottom: 80px;
     }
 
-    /* СПИСОК КАРТОК */
-    .feedbacks-client-list {
-        gap: 24px;
+    .feedbacks-title {
+        margin-bottom: 24px;
+        font-size: 72px;
     }
 
-    /* ОДИН КЛІЄНТ (li) */
+    .feedbacks-subtitle {
+        max-width: 620px;
+        font-size: 24px;
+    }
+
+    .feedbacks-list {
+        gap: 24px;
+        margin-bottom: 56px;
+    }
+
     .feedbacks-item {
-        width: calc((100% - 72px) / 4);
+        flex-basis: calc((100% - 48px) / 3);
+    }
+
+    .feedbacks-item:nth-child(-n + 3) {
+        display: block;
+    }
+
+    .feedbacks-card {
+        min-height: 332px;
+    }
+
+    .feedbacks-text {
+        font-size: 24px;
+    }
+
+    .feedbacks-nav-button {
+        width: 64px;
+        height: 64px;
     }
 }
